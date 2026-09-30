@@ -1,0 +1,15 @@
+# Netlify: the site builds from GitHub (drag-and-drop cannot run functions).
+# Database: Netlify Database (managed Postgres), provisioned from
+# netlify/database/migrations on the first deploy. Files: Netlify Blobs.
+# Environment variables (names only): see .env.example and docs/DEPLOY.md.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[functions]
+  node_bundler = "esbuild"
+  included_files = []

@@ -1,0 +1,26 @@
+# dependencies and build output (rebuilt by `npm run build`)
+node_modules/
+dist/
+src/server/generated/
+
+# local data: SQLite database, uploaded files, development keys
+data/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+
+# secrets: never commit these
+.env
+.env.*
+!.env.example
+*SECRETS*.txt
+*secrets*.txt
+*.pem
+*.key
+
+# tooling
+.netlify/
+qa-shots/
+*.log
+.DS_Store
+Thumbs.db
